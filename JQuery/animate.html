@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<style>
+    #go , #back:active{
+        background-color: red;
+    }
+</style>
+<script>
+    $(document).ready(function(){
+  $("#go").click(function(){
+    $("div").animate({
+      left: '250px',
+      opacity: '0.5',
+      height: '150px',
+      width: '150px'
+    })
+  })
+  $("#back").click(function(){
+    $("div").animate({
+      right: '250px',
+      opacity: '50',
+      height: '50px',
+      width: '50px'
+    })
+  })
+})
+</script>
+<body>
+    <button id="go" style="background-color: green; color: azure;">Ready Go!</button>
+    <button id="back" style="background-color: rgb(216, 170, 44); color: azure;">Go back</button><br><br><br><br><br>
+    <div style="background-color: #113982; height: 200px; width: 150px; position: absolute;"></div>
+</body>
+</html>

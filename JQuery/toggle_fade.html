@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <button id="toggleBtn"> Click Here to Fade In / Out coulor boxes</button>
+    <div id="Div1" style="width: 80px; height: 80px;display: none;background-color: rgb(255, 255, 255);"></div><br>
+    <div id="Div2" style="width: 80px; height: 80px;display: none;background-color: green;"></div><br>
+    <div id="Div3" style="width: 80px; height: 80px;display: none;background-color: blue;"></div><br>
+</body>
+<script>
+       $(document).ready(function(){
+        $('#toggleBtn').click(function(){
+            $('#Div1').fadeToggle(1000)
+            $('#Div2').fadeToggle(2000)
+            $('#Div3').fadeToggle(3000)
+        })
+       })
+ 
+</script>
+</html>

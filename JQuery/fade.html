@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <button>Click here to fade colour boxes</button><br><br>
+    <div id="Div1" style="width: 80px; height: 80px;display: none;background-color: red;"></div><br>
+    <div id="Div2" style="width: 80px; height: 80px;display: none;background-color: green;"></div><br>
+    <div id="Div3" style="width: 80px; height: 80px;display: none;background-color: blue;"></div><br>
+    <button id="hideBtn">Click to fade out</button>
+    <button id="toggleBtn"> Click Here</button>
+</body>
+<script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            $('#Div1').fadeIn();
+            $('#Div2').fadeIn("slow");
+            $('#Div3').fadeIn(2000);
+        })
+        $("#hideBtn").click(function(){
+            $('#Div1').fadeOut()
+            $('#Div2').fadeOut("fast")
+            $('#Div3').fadeOut("slow")
+
+
+        })
+        $('#toggleBtn').click(function(){
+            $('#Div1').fadeToggle()
+            $('#Div2').fadeToggle("slow")
+            $('#Div3').fadeToggle(3000)
+        })
+       
+    })
+    
+    
+</script>
+</html>
